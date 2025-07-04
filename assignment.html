@@ -1,0 +1,500 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHK Coffee Point</title>
+    <link rel="stylesheet" href="nav.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Montserrat:wght@700;900&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   
+
+    <!-- Navigation -->
+    <nav id="color" class="navbar navbar-expand-lg">
+        <div class="container" id="Home1">
+            <a class="navbar-brand" href="#">
+                <div class="logo">
+                    <div class="coffee-icon">
+                        <span>☕</span>
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-main">M-Haseeb</div>
+                        <div class="logo-sub">Coffee Point</div>
+                    </div>
+                </div>
+            </a> 
+                    <button class="md:hidden p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all" id="mobile-menu-button">
+                        <div class="w-6 flex flex-col items-center">
+                            <span class="block w-5 h-0.5 bg-amber-300 mb-1.5 transition-all transform mobile-menu-open:rotate-45 mobile-menu-open:translate-y-2"></span>
+                            <span class="block w-5 h-0.5 bg-amber-300 mb-1.5 transition-all mobile-menu-open:opacity-0"></span>
+                            <span class="block w-5 h-0.5 bg-amber-300 transition-all transform mobile-menu-open:-rotate-45 mobile-menu-open:-translate-y-2"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            
+                <div id="id"><a href="#home1" class="py-2 px-4 text-#6F4C3E font-medium hover:bg-#6F4C3E-100 rounded">Home</a>
+                <a href="#" class="py-2 px-4 text-#6F4C3E font-medium hover:bg-#6F4C3E-100 rounded">About</a>
+                <a href="#manu-1" class="py-2 px-4 text-brown font-medium hover:bg-gray-100 rounded">Menu</a>
+                <a href="#Product-1" class="py-2 px-4 text-black font-medium hover:bg-gray-100 rounded">Products</a>
+                <a href="#gallery-1" class="py-2 px-4 text-black font-medium hover:bg-gray-100 rounded">Gallery</a>
+                <a href="#blog-1" class="py-2 px-4 text-brown font-medium hover:bg-gray-100 rounded">Blog</a>
+                <a href="#contact-1" class="py-2 px-4 text-black font-medium hover:bg-gray-100 rounded">Contact</a></div>
+                
+                <div id="nav"><!-- Search Bar - Mobile -->
+                <div class="flex items-center rounded-full px-4 py-2 my-4 bg-black/100 backdrop-blur-sm">
+                    <input type="text" placeholder="Search..." class="search-input bg-transparent flex-grow text-white placeholder-white/70 text-sm focus:outline-none">
+                    <button class="ml-2 text-white hover:text-white/80 transition-colors">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav></div>
+
+    
+
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            const isClickInside = mobileMenu.contains(event.target) || 
+                                mobileMenuButton.contains(event.target);
+            
+            if (!isClickInside && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+
+
+
+
+
+  
+    <section class="categories-section" id="manu-1">
+        <div class="section-heading">
+            <h2>
+                <span class="top">Top </span>
+                <span class="categories">Categories</span>
+            </h2>
+        </div>
+        
+        <div class="coffee-row">
+            <!-- Coffee Card 1 - Espresso -->
+            <div class="coffee-card">
+                <img src="espresso.webp" alt="Espresso" class="coffee-image">
+                <div class="coffee-name">Espresso</div>
+            </div>
+            
+            <!-- Coffee Card 2 - Cappuccino -->
+            <div class="coffee-card">
+                <img src="images.jpg" alt="Cappuccino" class="coffee-image">
+                <div class="coffee-name">Cappuccino</div>
+            </div>
+            
+            <!-- Coffee Card 3 - Latte -->
+            <div class="coffee-card">
+                <img src="cafe-latte1-recipe.jpg" alt="Latte" class="coffee-image">
+                <div class="coffee-name">Latte</div>
+            </div>
+            
+            <!-- Coffee Card 4 - Cold Brew -->
+            <div class="coffee-card">
+                <img src="images (1).jpg" alt="Cold Brew" class="coffee-image">
+                <div class="coffee-name">Cold Brew</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Menu Section -->
+    <section class="menu-section py-5">
+        <div class="container">
+            <div class="menu-heading">
+                <h2 class="manu">Menu</h2>
+            </div>
+            <hr class="divider">
+            
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="how.webp" alt="Espresso" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Classic Espresso</h3>
+                            <p class="menu-price">Rs:500</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="images (2).jpg" alt="Cappuccino" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Traditional Cappuccino</h3>
+                            <p class="menu-price">Rs:430</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="images (3).jpg" alt="Latte" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Velvet Latte</h3>
+                            <p class="menu-price">Rs:550</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="Long_Black_Coffee_Vs_Americano_1024x1024.webp" alt="Americano" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Black Americano</h3>
+                            <p class="menu-price">Rs:600</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="unnamed.jpg" alt="Cold Brew" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Iced Cold Brew</h3>
+                            <p class="menu-price">Rs:520</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="images (4).jpg" alt="Mocha" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Chocolate Mocha</h3>
+                            <p class="menu-price">Rs:640</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 7 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="images (5).jpg" alt="Iced Coffee" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Iced Coffee Delight</h3>
+                            <p class="menu-price">Rs:390</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 8 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="r0_0_1000_750_w1200_h678_fmax.jpg" alt="Flat White" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Smooth Flat White</h3>
+                            <p class="menu-price">Rs:700</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 9 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="Homepage.jpg" alt="Turkish Coffee" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Turkish Coffee</h3>
+                            <p class="menu-price">Rs:660</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 10 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="images (6).jpg" alt="Irish Coffee" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Irish Coffee</h3>
+                            <p class="menu-price">Rs:530</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 11 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="salted-caramel-macchiato-featured-image-1.jpg" alt="Macchiato" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Caramel Macchiato</h3>
+                            <p class="menu-price">Rs:620</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 12 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="menu-card">
+                        <img src="affogato.jpg" alt="Affogato" class="menu-img">
+                        <div class="menu-content">
+                            <h3 class="menu-title">Vanilla Affogato</h3>
+                            <p class="menu-price">Rs:650</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="Product-1">
+        <div class="products-heading">
+            <h2>Products</h2>
+            <hr>
+        </div>
+        <div class="products-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images (9).jpg" alt="Starbucks Coffee">
+                </div>
+                <div class="product-info">
+                    <h3>Starbucks</h3>
+                    <p>Premium Dark Roast</p>
+                    <p class="product-price">Rs:3,640</p>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images (10).jpg" alt="Lavazza Coffee">
+                </div>
+                <div class="product-info">
+                    <h3>Lavazza</h3>
+                    <p>Italian Espresso Blend</p>
+                    <p class="product-price">Rs:4,060</p>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="IllyNespressoClassicoReview.jpg" alt="Illy Coffee">
+                </div>
+                <div class="product-info">
+                    <h3>Illy</h3>
+                    <p>Classic Roast</p>
+                    <p class="product-price">Rs:4,690</p>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images (15).jpg" alt="Peet's Coffee">
+                </div>
+                <div class="product-info">
+                    <h3>Peet's</h3>
+                    <p>Organic French Roast</p>
+                    <p class="product-price">Rs:3,710</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content" id="gallery-1">
+        <div class="gallery">
+            <h1 class="title"><span>Our</span> <span>Gallery</span></h1>
+            <div class="images">
+                <img src="download.jpg" alt="Coffee shop interior">
+                <img src="download (1).jpg" alt="Coffee bar">
+                <img src="download (2).jpg" alt="Lattes on table">
+                <img src="images (11).jpg" alt="Coffee beans">
+                <img src="pngtree.jpg" alt="Cappuccinos">
+                <img src="images (12).jpg" alt="Barista at work">
+                <img src="download (3).jpg" alt="Coffee menu">
+                <img src="images (14).jpg" alt="Café seating">
+            </div>
+        </div>
+    </main>
+<br>
+<br>
+    
+    <div class="blog-container" id="blog-1">
+        <h1 class="section-title">M-H Coffee Point Blog</h1>
+        <br>
+        <div class="blog-grid">
+            <!-- Card 1 -->
+            <div class="blog-card">
+                <div class="mhk-badge">MHK Specialty</div>
+                <img src="coffee-and-coffee-beans-with-plant.avif" class="card-image" alt="Coffee Beans">
+                <div class="card-content">
+                
+                    
+                    <div class="card-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        April 15, 2023
+                    </div>
+                    <p class="card-excerpt">
+                        Discover how M-H Coffee Point crafts its award-winning signature blend. From Ethiopian highlands to our roastery, follow the journey of our premium Arabica beans.
+                    </p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="blog-card">
+                <div class="mhk-badge">Brewing Guide</div>
+                <img src="difference_between_espresso_and_cappuccino.webp" class="card-image" alt="Latte Art">
+                <div class="card-content">
+                    <div class="card-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        March 28, 2023
+                    </div>
+                    <p class="card-excerpt">
+                        Our baristas share step-by-step techniques to create beautiful latte art using M-H Coffee Point's espresso. Perfect your heart, rosetta, and tulip designs.
+                    </p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="blog-card">
+                <div class="mhk-badge">Seasonal</div>
+                <img src="istockphoto-515838390-612x612.jpg" class="card-image" alt="Seasonal Coffee">
+                <div class="card-content">
+                    <div class="card-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        March 10, 2023
+                    </div>
+                    <p class="card-excerpt">
+                        Explore M-H Coffee Point's seasonal autumn lineup featuring pumpkin spice cold brew, maple pecan latte, and other limited-time fall favorites.
+                    </p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container" id="contact-1">
+        <section class="contact-section">
+            <div class="section-heading">
+                <h2>Contact Us</h2>
+            </div>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>mhkcoffeepoint@gmail.com</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+92 317 2551425</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>123 Gulshan-E-Hadeed Street, Karachi</p>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Your Phone">
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            
+            <div class="location-section">
+                <div class="location-heading">
+                    <h3>Our Location in Karachi</h3>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.844378332382!2d67.02869231554336!3d24.81735125370932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33bd2d0894547%3A0x2e6b1a8ae43b6c14!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1623827528785!5m2!1sen!2s" 
+                            allowfullscreen="" 
+                            loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    
+    
+    
+    <main class="main-content">
+        <!-- Main content area for MHK Coffee Point -->
+    </main>
+    
+    <footer>
+        <div class="footer-logo">
+            <div class="logo">
+                <div class="coffee-icon">
+                    <span>☕</span>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-m">M-Haseeb</div>
+                    <div class="logo-s">Coffee Point</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="social-wrapper">
+            <div class="social-icons">
+                <div class="social-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="social-icon"><i class="fa-brands fa-twitter"></i></div>
+                <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
+                <div class="social-icon"><i class="fa-brands fa-youtube"></i></div>
+                <div class="social-icon"><i class="fa-brands fa-pinterest"></i></div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+           &copy;2025 MHK Coffee Point. All Rights Reserved
+        </div>
+    </footer>
+
+
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
